@@ -1,0 +1,40 @@
+logging:
+  file: SpringBootDemo.log
+  level:
+    org:
+      org:
+        springframework:
+          web: info
+    root: info
+  pattern:
+    console: '%d{yyyy/MM/dd-HH:mm:ss} [%thread] %-5level %logger- %msg%n '
+    file: '%d{yyyy/MM/dd-HH:mm} [%thread] %-5level %logger- %msg%n'
+   
+    
+mybatis:
+  config-location: classpath:mapper/config/mybatis-config.xml
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.maven.domain
+  
+  
+  
+server:
+  port: 9090
+  servlet:
+    context-path: /maven
+    
+    
+spring:
+  application:
+    name: maven  #应用名称
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: 111111
+    url: jdbc:mysql://localhost:3306/sampledb
+    username: root
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      
+      
